@@ -1,13 +1,13 @@
-site_name: CS自学指南
-site_url: https://csdiy.wiki/
-site_author: PKUFlyingPig
+site_name: 王涛的博客
+site_url: https://wangtaoknight.github.io/My-Blog/
+site_author: TaoWang
 site_description: >-
-  CS自学指南
+个人学习博客
 
-repo_name: cs-self-learning
-repo_url: https://github.com/pkuflyingpig/cs-self-learning/
+repo_name: My-Blog
+repo_url: https://github.com/wangtaoknight/My-Blog/
 
-copyright: Copyright &copy; 2021-present <a href="https://github.com/PKUFlyingPig" target="_blank" rel="noopener noreferrer">PKUFlyingPig</a>
+copyright: Copyright &copy; 2021-present <a href="https://github.com/wangtaoknight" target="_blank" rel="noopener noreferrer">wangtaoknight</a>
 
 theme:
   name: material

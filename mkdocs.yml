@@ -14,6 +14,7 @@ theme:
   static_templates:
     - 404.html
   favicon: images/favicon.ico
+  logo: images/logo.png
   apple-touch-icon-precomposed: images/mobile_icon.png
   include_search_page: false
   search_index_only: true
@@ -55,6 +56,9 @@ markdown_extensions:
   - attr_list
   - md_in_html
   - footnotes
+  - admonition
+  - toc:
+      permalink: true
 
 plugins:
   - i18n:
@@ -66,239 +70,162 @@ plugins:
         - locale: en
           name: English
           build: true
-          site_name: csdiy.wiki
+          site_name: Tao Wang's Blog
           nav_translations:
-            前言: Foreword
-            如何使用这本书: How To Use The Book
-            一个仅供参考的CS学习规划: Guideline
-            必学工具: Productivity Toolkit
-            翻墙: GFW
-            日常学习工作流: Notes Workflow
-            实用工具箱: Useful Tools
-            毕业论文: Thesis Writing
-            信息检索: Information Retrieval
-            好书推荐: Book Recommendation
-            数学基础: Fundamental Mathematics
-            数学进阶: Advanced Mathematics
-            编程入门: Fundamental Programming
-            Python 语言: Python Language
-            Java 语言: Java Language
-            C 语言: C Language
-            C++ 语言: C++ Language
-            Rust 语言: Rust Language
-            函数式语言: Functional Programming
-            电子基础: Fundamental Electronics
-            数据结构与算法: Data Structures and Algorithms
-            软件工程: Software Engineering
-            计算机系统基础: Computer Systems Principles
-            体系结构: Computer Architecture
-            操作系统: Operating Systems
-            并行与分布式系统: Distributed Systems
-            计算机系统安全: Computer Security
-            计算机网络: Computer Networking
-            数据库系统: Database Systems
-            编译原理: Compilers
-            编程语言设计与分析: Programming Language Design and Analysis
-            NJU 软件分析: NJU Software Analysis
-            PKU 软件分析: PKU Software Analysis
-            程序语言设计: Programming Language
-            计算机图形学: Computer Graphics
-            Web开发: Web Development
-            数据科学: Data Science
-            人工智能: Artificial Intelligence
-            机器学习: Machine Learning
-            机器学习系统: Machine Learning Systems
-            智能计算系统: Intelligent Computing Systems
-            深度学习: Deep Learning
-            "国立台湾大学: 李宏毅机器学习": NTU Machine Learning
-            深度生成模型: Deep Generative Models
-            学习路线图: Roadmap
-            "大语言模型": Large Language Models
-            机器学习进阶: Advanced Machine Learning
-            学习路线图: Roadmap
-            后记: Postscript
+            首页: Home
+            文章: Posts
+            关于: About
+            红楼梦: Dream of the Red Chamber
+            使用说明: Guide
   - search:
       lang:
         - zh
         - en
-  - git-revision-date:
+  - git-revision-date
   - minify:
       minify_html: true
-  - open-in-new-tab:
+  - open-in-new-tab
 
 extra:
   social:
     - icon: fontawesome/brands/github
-      link: https://github.com/pkuflyingpig/cs-self-learning/
-  analytics:
-    provider: google
-    property: G-KJB4RXSKZG
+      link: https://github.com/wangtaoknight
+  # 如需统计，请替换为你自己的 Google Analytics ID
+  # analytics:
+  #   provider: google
+  #   property: G-XXXXXXXXXX
 
 nav:
-  - 前言: "index.md"
-  - 如何使用这本书: "使用指南.md"
-  - 一个仅供参考的CS学习规划: "CS学习规划.md"
-  - 必学工具:
-      - 翻墙: "必学工具/翻墙.md"
-      - Vim: "必学工具/Vim.md"
-      - Emacs: "必学工具/Emacs.md"
-      - Git: "必学工具/Git.md"
-      - GitHub: "必学工具/GitHub.md"
-      - "GNU Make": "必学工具/GNU_Make.md"
-      - CMake: "必学工具/CMake.md"
-      - LaTeX: "必学工具/LaTeX.md"
-      - Docker: "必学工具/Docker.md"
-      - Scoop: "必学工具/Scoop.md"
-      - 日常学习工作流: "必学工具/workflow.md"
-      - 实用工具箱: "必学工具/tools.md"
-      - 毕业论文: "必学工具/thesis.md"
-      - 信息检索: "必学工具/信息检索.md"
-  - 好书推荐: "好书推荐.md"
-  - 数学基础:
-      - "MIT18.01/18.02: Calculus": "数学基础/MITmaths.md"
-      - "MIT18.06: Linear Algebra": "数学基础/MITLA.md"
-      - "MIT6.050J: Information theory and Entropy": "数学基础/information.md"
-  - 数学进阶:
-      - "UCB CS70: discrete Math and probability theory": "数学进阶/CS70.md"
-      - "UCB CS126: probability theory": "数学进阶/CS126.md"
-      - "MIT 6.042J: Mathematics for Computer Science": "数学进阶/6.042J.md"
-      - "MIT18.330: Introduction to numerical analysis": "数学进阶/numerical.md"
-      - "Standford EE364A: Convex Optimization": "数学进阶/convex.md"
-      - "The Information Theory, Pattern Recognition, and Neural Networks": "数学进阶/The_Information_Theory_Pattern_Recognition_and_Neural_Networks.md"
-  - 编程入门:
-      - "MIT-Missing-Semester": "编程入门/MIT-Missing-Semester.md"
-      - "Sysadmin DeCal": "编程入门/DeCal.md"
-      - Python 语言:
-        - "UCB CS61A: Structure and Interpretation of Computer Programs": "编程入门/Python/CS61A.md"
-        - "CS50P: CS50's Introduction to Programming with Python": "编程入门/Python/CS50P.md"
-        - "MIT6.100L: Introduction to CS and Programming using Python": "编程入门/Python/MIT6.100L.md"
-      - C 语言:
-        - "Harvard CS50: This is CS50x": "编程入门/C/CS50.md"
-        - "Duke University: Introductory C Programming Specialization": "编程入门/C/Duke-Coursera-Intro-C.md"
-      - C++ 语言:
-        - "AmirKabir University of Technology AP1400-2: Advanced Programming": "编程入门/cpp/AUT1400.md"
-        - "Stanford CS106L: Standard C++ Programming": "编程入门/cpp/CS106L.md"
-        - "Stanford CS106B/X": "编程入门/cpp/CS106B_CS106X.md"
-      - Java 语言:
-        - "MIT 6.092: Introduction To Programming In Java": "编程入门/Java/MIT 6.092.md"
-      - Rust 语言:
-        - "Stanford CS110L: Safety in Systems Programming": "编程入门/Rust/CS110L.md"
-        - "KAIST CS220: Programming Principles": "编程入门/Rust/cs220.md"
-        - "KAIST CS431: Concurrent Programming": "编程入门/Rust/cs431.md"
-      - 函数式语言:
-        - "Cornell CS3110: OCaml Programming Correct + Efficient + Beautiful": "编程入门/Functional/CS3110.md"
-        - "Haskell MOOC": "编程入门/Functional/Haskell-MOOC.md"
-  - 电子基础:
-      - "EE16A&B: Designing Information Devices and Systems I&II": "电子基础/EE16.md"
-      - "UCB EE120 : Signal and Systems": "电子基础/signal.md"
-      - "MIT 6.007 Signals and Systems": "电子基础/Signals_and_Systems_AVO.md"
-  - 数据结构与算法:
-      - "UCB CS61B: Data Structures and Algorithms": "数据结构与算法/CS61B.md"
-      - "Coursera: Algorithms I & II": "数据结构与算法/Algo.md"
-      - "MIT 6.006: Introduction to Algorithms": "数据结构与算法/6.006.md"
-      - "MIT 6.046: Design and Analysis of Algorithms": "数据结构与算法/6.046.md"
-      - "UCB CS170: Efficient Algorithms and Intractable Problems": "数据结构与算法/CS170.md"
-  - 软件工程:
-      - "MIT 6.031: Software Construction": "软件工程/6031.md"
-      - "UCB CS169: software engineering": "软件工程/CS169.md"
-      - "CMU 17-803: Empirical Methods": "软件工程/17803.md"
-  - 计算机系统基础:
-      - "CMU 15-213: CSAPP": "计算机系统基础/CSAPP.md"
-      - "Stanford CS110: Principles of Computer Systems": "计算机系统基础/CS110.md"
-  - 体系结构:
-      - "Coursera: Nand2Tetris": "体系结构/N2T.md"
-      - "UCB CS61C: Great Ideas in Computer Architecture": "体系结构/CS61C.md"
-      - "ETHz: Digital Design and Computer Architecture": "体系结构/DDCA.md"
-      - "ETHz: Computer Architecture": "体系结构/CA.md"
-  - 操作系统:
-      - "MIT 6.1810 (6.S081): Operating System Engineering": "操作系统/MIT6.S081.md"
-      - "UCB CS162: Operating Systems and Systems Programming": "操作系统/CS162.md"
-      - "NJU OS: Operating System Design and Implementation": "操作系统/NJUOS.md"
-      - "HIT OS: Operating System": "操作系统/HITOS.md"
-  - 并行与分布式系统:
-      - "CMU 15-418/Stanford CS149: Parallel Computing": "并行与分布式系统/CS149.md"
-      - "MIT 6.5840 (6.824): Distributed System": "并行与分布式系统/MIT6.824.md"
-  - 计算机系统安全:
-      - "UCB CS161: Computer Security": "系统安全/CS161.md"
-      - "MIT 6.1600: Foundations of Computer Security": "系统安全/MIT6.1600.md"
-      - "MIT 6.858: Computer System Security": "系统安全/MIT6.858.md"
-      - "ASU CSE365: Introduction to Cybersecurity": "系统安全/CSE365.md"
-      - "ASU CSE466: Computer Systems Security": "系统安全/CSE466.md"
-      - "SU SEED Labs": "系统安全/SEEDLabs.md"
-  - 计算机网络:
-      - "UCB CS168: Introduction to the Internet: Architecture and Protocols": "计算机网络/CS168.md"
-      - "Stanford CS144: Computer Network": "计算机网络/CS144.md"
-      - "USTC Computer Networking:A Top-Down Approach": "计算机网络/topdown_ustc.md"
-      - "Computer Networking: A Top-Down Approach": "计算机网络/topdown.md"
-  - 数据库系统:
-      - "UCB CS186: Introduction to Database System": "数据库系统/CS186.md"
-      - "CMU 15-445: Database Systems": "数据库系统/15445.md"
-      - "Caltech CS122: Database System Implementation": "数据库系统/CS122.md"
-      - "Stanford CS346: Database System Implementation": "数据库系统/CS346.md"
-      - "CMU 15-799: Special Topics in Database Systems": "数据库系统/15799.md"
-  - 编译原理:
-      - "PKU 编译原理实践": "编译原理/PKU-Compilers.md"
-      - "Stanford CS143: Compilers": "编译原理/CS143.md"
-      - "NJU 编译原理": "编译原理/NJU-Compilers.md"
-      - "KAIST CS420: Compiler Design": "编译原理/CS420.md"
-      - "USTC 编译原理与技术": "编译原理/USTC-Compilers.md"
-      - "SJTU 编译原理": "编译原理/SJTU-Compilers.md"
-  - 编程语言设计与分析:
-      - "Stanford CS242: Programming Languages": "编程语言设计与分析/CS242.md"
-      - "NJU 软件分析": "编程语言设计与分析/NJU-SoftwareAnalysis.md"
-      - "PKU 软件分析": "编程语言设计与分析/PKU-SoftwareAnalysis.md"
-      - "Cambridge: Semantics of Programming Languages": "编程语言设计与分析/Cambridge-Semantics.md"
-  - 计算机图形学:
-      - "GAMES101": "计算机图形学/GAMES101.md"
-      - "GAMES202": "计算机图形学/GAMES202.md"
-      - "GAMES103": "计算机图形学/GAMES103.md"
-      - "Stanford CS148": "计算机图形学/CS148.md"
-      - "CMU 15-462": "计算机图形学/15462.md"
-      - "USTC CG": "计算机图形学/USTC ComputerGraphics.md"
-  - Web开发:
-      - "MIT web development course": "Web开发/mitweb.md"
-      - "Stanford CS142: Web Applications": "Web开发/CS142.md"
-      - "University of Helsinki: Full Stack open 2022": "Web开发/fullstackopen.md"
-      - "CS571 Building UI (React & React Native)": "Web开发/CS571.md"
-  - 数据科学:
-      - "UCB Data100: Principles and Techniques of Data Science": "数据科学/Data100.md"
-  - 人工智能:
-      - "Neural Networks: Zero to Hero": "人工智能/Neural Networks：Zero to Hero.md"
-      - "Harvard CS50's Introduction to AI with Python": "人工智能/CS50.md"
-      - "UCB CS188: Introduction to Artificial Intelligence": "人工智能/CS188.md"
-  - 机器学习:
-      - "Coursera: Machine Learning": "机器学习/ML.md"
-      - "Stanford CS229: Machine Learning": "机器学习/CS229.md"
-      - "UCB CS189: Introduction to Machine Learning": "机器学习/CS189.md"
-  - 机器学习系统:
-      - "CMU 15-442/642: Machine Learning Systems": "机器学习系统/CMU15-442.md"
-      - "智能计算系统": "机器学习系统/AICS.md"
-      - "CMU 10-414/714: Deep Learning Systems": "机器学习系统/CMU10-414.md"
-      - "MIT6.5940: TinyML and Efficient Deep Learning Computing": "机器学习系统/EML.md"
-      - "Machine Learning Compilation": "机器学习系统/MLC.md"
-      - "UCSD CSE234: Data Systems for Machine Learning": "机器学习系统/CSE234.md"
-  - 深度学习:
-      - "Coursera: Deep Learning": "深度学习/CS230.md"
-      - "国立台湾大学: 李宏毅机器学习": "深度学习/LHY.md"
-      - "CMU 11-785: Introduction to Deep Learning": "深度学习/CMU11-785.md"
-      - "MIT 6.7960: Deep Learning": "深度学习/MIT6-7960.md"
-      - "NYU DLSP21: NYU Deep Learning Spring 2021": "深度学习/NYU-DLSP21.md"
-      - "UMich EECS 498-007 / 598-005: Deep Learning for Computer Vision": "深度学习/EECS498-007.md"
-      - "Stanford CS231n: CNN for Visual Recognition": "深度学习/CS231.md"
-      - "Stanford CS224n: Natural Language Processing": "深度学习/CS224n.md"
-      - "Stanford CS224w: Machine Learning with Graphs": "深度学习/CS224w.md"
-      - "UCB CS285: Deep Reinforcement Learning": "深度学习/CS285.md"
-  - 深度生成模型:
-      - "学习路线图": "深度生成模型/roadmap.md"
-      - "MIT 6.S184: Generative AI with Stochastic Differential Equations": "深度生成模型/MIT6.S184.md"
-      - "大语言模型":
-        - "CMU 11-868: Large Language Model System": "深度生成模型/大语言模型/CMU11-868.md"
-        - "CMU 11-667: Large Language Models: Methods and Applications": "深度生成模型/大语言模型/CMU11-667.md"
-        - "CMU 11-711: Advanced Natural Language Processing": "深度生成模型/大语言模型/CMU11-711.md"
-  - 机器学习进阶:
-      - "学习路线图": "机器学习进阶/roadmap.md"
-      - "CMU 10-708: Probabilistic Graphical Models": "机器学习进阶/CMU10-708.md"
-      - "Columbia STAT 8201: Deep Generative Models": "机器学习进阶/STAT8201.md"
-      - "U Toronto STA 4273 Winter 2021: Minimizing Expectations": "机器学习进阶/STA4273.md"
-      - "Stanford STATS214 / CS229M: Machine Learning Theory": "机器学习进阶/CS229M.md"
-  - 后记: "后记.md"
+  - 首页: "index.md"
+  - 文章:
+      - 我的第一篇文章: "posts/hello-world.md"
+  - 关于: "about.md"
+  - 红楼梦:
+      - 目录: "红楼梦/index.md"
+      - "第 1 — 20 回":
+          - "第一回 甄士隱夢幻識通靈 賈雨村風塵懷閨秀": "红楼梦/第001回.md"
+          - "第二回 賈夫人仙逝揚州城 冷子興演說榮國府": "红楼梦/第002回.md"
+          - "第三回 金陵城起復賈雨村 榮國府收養林黛玉": "红楼梦/第003回.md"
+          - "第四回 薄命女偏逢薄命郎 葫蘆僧亂判葫蘆案": "红楼梦/第004回.md"
+          - "第五回 開生面夢演紅樓夢 立新場情傳幻境情": "红楼梦/第005回.md"
+          - "第六回 賈寶玉初試雲雨情 劉姥姥一進榮國府": "红楼梦/第006回.md"
+          - "第七回 送宮花周瑞嘆英蓮 談肄業秦鐘結寶玉": "红楼梦/第007回.md"
+          - "第八回 薛寶釵小恙梨香院 賈寶玉大醉絳芸軒": "红楼梦/第008回.md"
+          - "第九回 戀風流情友入家塾 起嫌疑頑童鬧學堂": "红楼梦/第009回.md"
+          - "第十回 金寡婦貪利權受辱 張太醫論病細窮源": "红楼梦/第010回.md"
+          - "第十一回 慶壽辰宁府排家宴 見熙鳳賈瑞起淫心": "红楼梦/第011回.md"
+          - "第十二回 王熙鳳毒設相思局 賈天祥正照風月鑒": "红楼梦/第012回.md"
+          - "第十三回 秦可卿死封龍禁尉 王熙鳳協理宁國府": "红楼梦/第013回.md"
+          - "第十四回 林如海捐館揚州城 賈寶玉路謁北靜王": "红楼梦/第014回.md"
+          - "第十五回 王鳳姐弄權鐵檻寺 秦鯨卿得趣饅頭庵": "红楼梦/第015回.md"
+          - "第十六回 賈元春才選鳳藻宮 秦鯨卿夭逝黃泉路": "红楼梦/第016回.md"
+          - "第十七回 會芳園試才題對額 賈寶玉機敏動諸賓": "红楼梦/第017回.md"
+          - "第十八回 林黛玉誤剪香囊袋 賈元春歸省慶元宵": "红楼梦/第018回.md"
+          - "第十九回 情切切良宵花解語 意綿綿靜日玉生香": "红楼梦/第019回.md"
+          - "第二十回 王熙鳳正言彈妒意 林黛玉俏語謔嬌音": "红楼梦/第020回.md"
+      - "第 21 — 40 回":
+          - "第二十一回 賢襲人嬌嗔箴寶玉 俏平兒軟語救賈璉": "红楼梦/第021回.md"
+          - "第二十二回 聽曲文寶玉悟禪机 製燈迷賈政悲讖語": "红楼梦/第022回.md"
+          - "第二十三回 西廂記妙詞通戲語 牡丹亭艷曲警芳心": "红楼梦/第023回.md"
+          - "第二十四回 醉金剛輕財尚義俠 痴女兒遺帕惹相思": "红楼梦/第024回.md"
+          - "第二十五回 魘魔法姊弟逢五鬼 紅樓夢通靈遇雙真": "红楼梦/第025回.md"
+          - "第二十六回 蜂腰橋設言傳心事 瀟湘館春困發幽情": "红楼梦/第026回.md"
+          - "第二十七回 滴翠亭楊妃戲彩蝶 埋香冢飛燕泣殘紅": "红楼梦/第027回.md"
+          - "第二十八回 蔣玉菡情贈茜香羅 薛寶釵羞籠紅麝串": "红楼梦/第028回.md"
+          - "第二十九回 享福人福深還禱福 痴情女情重愈斟情": "红楼梦/第029回.md"
+          - "第三十回 寶釵借扇机帶雙敲 齡官划薔痴及局外": "红楼梦/第030回.md"
+          - "第三十一回 撕扇子作千金一笑 因麒麟伏白首雙星": "红楼梦/第031回.md"
+          - "第三十二回 訴肺腑心迷活寶玉 含恥辱情烈死金釧": "红楼梦/第032回.md"
+          - "第三十三回 手足耽耽小動唇舌 不肖种种大承笞撻": "红楼梦/第033回.md"
+          - "第三十四回 情中情因情感妹妹 錯里錯以錯勸哥哥": "红楼梦/第034回.md"
+          - "第三十五回 白玉釧親嘗蓮葉羹 黃金鶯巧結梅花絡": "红楼梦/第035回.md"
+          - "第三十六回 繡鴛鴦夢兆絳芸軒 識分定情悟梨香院": "红楼梦/第036回.md"
+          - "第三十七回 秋爽齋偶結海棠社 蘅蕪苑夜擬菊花題": "红楼梦/第037回.md"
+          - "第三十八回 林瀟湘魁奪菊花詩 薛蘅蕪諷和螃蟹詠": "红楼梦/第038回.md"
+          - "第三十九回 村老嫗謊談承色笑 癡情子實意覓蹤跡": "红楼梦/第039回.md"
+          - "第四十回 史太君兩宴大觀園 金鴛鴦三宣牙牌令": "红楼梦/第040回.md"
+      - "第 41 — 60 回":
+          - "第四十一回 賈寶玉品茶攏翠庵 劉姥姥醉臥怡紅院": "红楼梦/第041回.md"
+          - "第四十二回 蘅蕪君蘭言解疑語 瀟湘子雅謔補餘香": "红楼梦/第042回.md"
+          - "第四十三回 閒取樂偶攢金慶壽 不了情暫撮土為香": "红楼梦/第043回.md"
+          - "第四十四回 變生不測鳳姐潑醋 喜出望外平兒理妝": "红楼梦/第044回.md"
+          - "第四十五回 金蘭契互剖金蘭語 風雨夕悶製風雨詞": "红楼梦/第045回.md"
+          - "第四十六回 尷尬人難免尷尬事 鴛鴦女誓絕鴛鴦偶": "红楼梦/第046回.md"
+          - "第四十七回 呆霸王調情遭苦打 冷郎君懼禍走他鄉": "红楼梦/第047回.md"
+          - "第四十八回 濫情人情誤思游藝 慕雅女雅集苦吟詩": "红楼梦/第048回.md"
+          - "第四十九回 琉璃世界白雪紅梅 脂粉香娃割腥啖膻": "红楼梦/第049回.md"
+          - "第五十回 蘆雪广爭聯即景詩 暖香塢創製春燈謎": "红楼梦/第050回.md"
+          - "第五十一回 薛小妹新編怀古詩 胡庸醫亂用虎狼藥": "红楼梦/第051回.md"
+          - "第五十二回 俏平兒情掩蝦鬚鐲 勇晴雯病補雀金裘": "红楼梦/第052回.md"
+          - "第五十三回 寧國府除夕祭宗祠 榮國府元宵開夜宴": "红楼梦/第053回.md"
+          - "第五十四回 史太君破陳腐舊套 王熙鳳效戲彩斑衣": "红楼梦/第054回.md"
+          - "第五十五回 辱親女愚妾爭閒氣 欺幼主刁奴蓄險心": "红楼梦/第055回.md"
+          - "第五十六回 敏探春興利除宿弊 識寶釵小惠全大體": "红楼梦/第056回.md"
+          - "第五十七回 慧紫鵑情辭試莽玉 慈姨媽愛語慰痴顰": "红楼梦/第057回.md"
+          - "第五十八回 杏子陰假鳳泣虛凰 茜紗窗真情揆痴理": "红楼梦/第058回.md"
+          - "第五十九回 柳葉渚邊嗔鶯吒燕 絳芸軒里召將飛符": "红楼梦/第059回.md"
+          - "第六十回 茉莉粉替去薔薇硝 玫瑰露引來茯苓霜": "红楼梦/第060回.md"
+      - "第 61 — 80 回":
+          - "第六十一回 投鼠忌器寶玉瞞贓 判冤決獄平兒行權": "红楼梦/第061回.md"
+          - "第六十二回 憨湘雲醉眠芍藥裀 呆香菱情解石榴裙": "红楼梦/第062回.md"
+          - "第六十三回 壽怡紅群芳開夜宴 死金丹獨艷理親喪": "红楼梦/第063回.md"
+          - "第六十四回 幽淑女悲題五美吟 浪蕩子情遺九龍珮": "红楼梦/第064回.md"
+          - "第六十五回 賈二舍偷娶尤二姨 尤三姐思嫁柳二郎": "红楼梦/第065回.md"
+          - "第六十六回 情小妹恥情歸地府 冷二郎一冷入空門": "红楼梦/第066回.md"
+          - "第六十七回 見土儀顰卿思故里 聞秘事鳳姐訊家童": "红楼梦/第067回.md"
+          - "第六十八回 苦尤娘賺入大觀園 酸鳳姐大鬧宁國府": "红楼梦/第068回.md"
+          - "第六十九回 弄小巧用借劍殺人 覺大限吞生金自逝": "红楼梦/第069回.md"
+          - "第七十回 林黛玉重建桃花社 史湘雲偶填柳絮詞": "红楼梦/第070回.md"
+          - "第七十一回 嫌隙人有心生嫌隙 鴛鴦女無意遇鴛鴦": "红楼梦/第071回.md"
+          - "第七十二回 王熙鳳恃強羞說病 來旺婦倚勢霸成親": "红楼梦/第072回.md"
+          - "第七十三回 痴丫頭誤拾繡春囊 懦小姐不問累金鳳": "红楼梦/第073回.md"
+          - "第七十四回 惑奸讒抄揀大觀園 矢孤介杜絕宁國府": "红楼梦/第074回.md"
+          - "第七十五回 開夜宴异兆發悲音 賞中秋新詞得佳讖": "红楼梦/第075回.md"
+          - "第七十六回 凸碧堂品笛感凄清 凹晶館聯詩悲寂寞": "红楼梦/第076回.md"
+          - "第七十七回 俏丫鬟抱屈夭風流 美优伶斬情歸水月": "红楼梦/第077回.md"
+          - "第七十八回 老學士閒徵姽嫿詞 痴公子杜撰芙蓉誄": "红楼梦/第078回.md"
+          - "第七十九回 薛文龍悔娶河東獅 賈迎春誤嫁中山狼": "红楼梦/第079回.md"
+          - "第八十回 懦弱迎春腸回九曲 姣怯香菱病入膏肓": "红楼梦/第080回.md"
+      - "第 81 — 100 回":
+          - "第八十一回 占旺相四美釣游魚 奉嚴詞兩番入家塾": "红楼梦/第081回.md"
+          - "第八十二回 老學究講義警頑心 病瀟湘痴魂驚惡夢": "红楼梦/第082回.md"
+          - "第八十三回 省宮闈賈元妃染恙 鬧閨閫薛寶釵吞聲": "红楼梦/第083回.md"
+          - "第八十四回 試文字寶玉始提親 探驚風賈環重結怨": "红楼梦/第084回.md"
+          - "第八十五回 賈存周報升郎中任 薛文起复惹放流刑": "红楼梦/第085回.md"
+          - "第八十六回 受私賄老官翻案牘 寄閒情淑女解琴書": "红楼梦/第086回.md"
+          - "第八十七回 感深秋撫琴悲往事 坐禪寂走火入邪魔": "红楼梦/第087回.md"
+          - "第八十八回 博庭歡寶玉贊孤兒 正家法賈珍鞭悍仆": "红楼梦/第088回.md"
+          - "第八十九回 人亡物在公子填詞 蛇影杯弓顰卿絕粒": "红楼梦/第089回.md"
+          - "第九十回 失綿衣貧女耐嗷嘈 送果品小郎驚叵測": "红楼梦/第090回.md"
+          - "第九十一回 縱淫心寶蟾工設計 布疑陣寶玉妄談禪": "红楼梦/第091回.md"
+          - "第九十二回 評女傳巧姐慕賢良 玩母珠賈政參聚散": "红楼梦/第092回.md"
+          - "第九十三回 甄家僕投靠賈家門 水月庵掀翻風月案": "红楼梦/第093回.md"
+          - "第九十四回 宴海棠賈母賞花妖 失寶玉通靈知奇禍": "红楼梦/第094回.md"
+          - "第九十五回 因訛成實元妃薨逝 以假混真寶玉瘋顛": "红楼梦/第095回.md"
+          - "第九十六回 瞞消息鳳姐設奇謀 泄机關顰兒迷本性": "红楼梦/第096回.md"
+          - "第九十七回 林黛玉焚稿斷痴情 薛寶釵出閨成大禮": "红楼梦/第097回.md"
+          - "第九十八回 苦絳珠魂歸離恨天 病神瑛淚灑相思地": "红楼梦/第098回.md"
+          - "第九十九回 守官箴惡奴同破例 閱邸報老舅自擔驚": "红楼梦/第099回.md"
+          - "第一零零回 破好事香菱結深恨 悲遠嫁寶玉感離情": "红楼梦/第100回.md"
+      - "第 101 — 120 回":
+          - "第一零一回 大觀園月夜感幽魂 散花寺神簽驚异兆": "红楼梦/第101回.md"
+          - "第一零二回 宁國府骨肉病災襟 大觀園符水驅妖孽": "红楼梦/第102回.md"
+          - "第一零三回 施毒計金桂自焚身 昧真禪雨村空遇舊": "红楼梦/第103回.md"
+          - "第一零四回 醉金剛小鰍生大浪 痴公子餘痛触前情": "红楼梦/第104回.md"
+          - "第一零五回 錦衣軍查抄宁國府 驄馬使彈劾平安州": "红楼梦/第105回.md"
+          - "第一零六回 王熙鳳致禍抱羞慚 賈太君禱天消禍患": "红楼梦/第106回.md"
+          - "第一零七回 散餘資賈母明大義 复世職政老沐天恩": "红楼梦/第107回.md"
+          - "第一零八回 強歡笑蘅蕪慶生辰 死纏綿瀟湘聞鬼哭": "红楼梦/第108回.md"
+          - "第一零九回 候芳魂五兒承錯愛 還孽債迎女返真元": "红楼梦/第109回.md"
+          - "第一一零回 史太君壽終歸地府 王鳳姐力詘失人心": "红楼梦/第110回.md"
+          - "第一一一回 鴛鴦女殉主登太虛 狗彘奴欺天招伙盜": "红楼梦/第111回.md"
+          - "第一一二回 活冤孽妙尼遭大劫 死讎仇趙妾赴冥曹": "红楼梦/第112回.md"
+          - "第一一三回 忏宿冤鳳姐託村嫗 釋舊憾情婢感痴郎": "红楼梦/第113回.md"
+          - "第一一四回 王熙鳳歷幻返金陵 甄應嘉蒙恩還玉闕": "红楼梦/第114回.md"
+          - "第一一五回 惑偏私惜春矢素志 證同類寶玉失相知": "红楼梦/第115回.md"
+          - "第一一六回 得通靈幻境悟仙緣 送慈柩故鄉全孝道": "红楼梦/第116回.md"
+          - "第一一七回 阻超凡佳人雙護玉 欣聚党惡子獨承家": "红楼梦/第117回.md"
+          - "第一一八回 記微嫌舅兄欺弱女 驚謎語妻妾諫痴人": "红楼梦/第118回.md"
+          - "第一一九回 中鄉魁寶玉卻塵緣 沐皇恩賈家延世澤": "红楼梦/第119回.md"
+          - "第一二零回 甄士隱詳說太虛情 賈雨村歸結紅樓夢": "红楼梦/第120回.md"
+  - 使用说明: "使用说明.md"

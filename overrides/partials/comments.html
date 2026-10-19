@@ -1,9 +1,18 @@
-<!-- Insert generated snippet here -->
+<!--
+  评论功能（Giscus）默认关闭，避免继续向原作者的仓库提交评论。
+
+  启用步骤：
+  1. 在 GitHub 仓库 Settings -> General -> Features 中勾选 Discussions；
+  2. 访问 https://giscus.app/zh-CN ，填入你的仓库 wangtaoknight/My-Blog；
+  3. 安装 giscus App，选择 Discussion 分类；
+  4. 把生成的 data-repo / data-repo-id / data-category / data-category-id 填到下方，
+     并去掉本段与末尾注释标记。
+
 <script src="https://giscus.app/client.js"
-        data-repo="PKUFlyingPig/cs-self-learning"
-        data-repo-id="R_kgDOGP67ng"
+        data-repo="wangtaoknight/My-Blog"
+        data-repo-id="REPLACE_WITH_REPO_ID"
         data-category="Announcements"
-        data-category-id="DIC_kwDOGP67ns4COM9Q"
+        data-category-id="REPLACE_WITH_CATEGORY_ID"
         data-mapping="title"
         data-reactions-enabled="1"
         data-emit-metadata="0"
@@ -15,7 +24,6 @@
         async>
 </script>
 
-<!-- Synchronize Giscus theme with palette -->
 <script>
 var giscus = document.querySelector("script[src*=giscus]")
 
@@ -27,7 +35,7 @@ if (palette && typeof palette.color === "object") {
     : "light_protanopia"
 
     // Instruct Giscus to set theme
-    giscus.setAttribute("data-theme", theme) 
+    giscus.setAttribute("data-theme", theme)
 }
 
 // Register event handlers after documented loaded
@@ -50,3 +58,4 @@ document.addEventListener("DOMContentLoaded", function() {
     })
 })
 </script>
+-->

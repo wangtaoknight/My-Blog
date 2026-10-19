@@ -5,21 +5,21 @@ on:
     branches:
       - master
       - main
+  workflow_dispatch:
 
 jobs:
   deploy:
     permissions:
       contents: write # 允许工作流向仓库写入内容
-# ... 后面的代码保持不变
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v4
         with:
           fetch-depth: 0
 
-      - uses: actions/setup-python@v2
+      - uses: actions/setup-python@v5
         with:
-          python-version: 3.x
+          python-version: '3.11'
 
       - run: pip3 install -U -r requirements.txt
       - run: mkdocs gh-deploy --force

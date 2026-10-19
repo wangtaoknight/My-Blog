@@ -23,6 +23,13 @@ theme:
     - header.autohide
     - navigation.tracking
     - navigation.top
+    # - navigation.tabs          # 顶部一级导航
+    - navigation.sections      # 侧边栏分组
+    - navigation.footer        # 页脚上一页/下一页
+
+    - toc.follow               # 右侧目录跟随滚动
+    - content.code.copy        # 代码块一键复制
+    # - content.action.edit      # 页面右上角“编辑此页”
     - search.highlight
     - search.share
     - search.suggest
@@ -31,15 +38,15 @@ theme:
   palette:
     - media: "(prefers-color-scheme: light)"
       scheme: default
-      primary: light blue
-      accent: deep purple
+      primary: indigo
+      accent: amber
       toggle:
         icon: material/weather-sunny
         name: Switch to dark mode
     - media: "(prefers-color-scheme: dark)"
       scheme: slate
-      primary: cyan
-      accent: deep purple
+      primary: indigo
+      accent: amber
       toggle:
         icon: material/weather-night
         name: Switch to light mode
@@ -58,7 +65,7 @@ markdown_extensions:
   - footnotes
   - admonition
   - toc:
-      permalink: true
+      permalink: false
 
 plugins:
   - i18n:

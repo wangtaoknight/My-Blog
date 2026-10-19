@@ -14,7 +14,3 @@
 
 - [关于我](about.md)
 - [站点使用与维护说明](使用说明.md)
-
-## 快速开始
-
-本站基于 [MkDocs Material](https://squidfunk.github.io/mkdocs-material/) 构建。所有文章使用 Markdown 编写，放在 `docs/` 目录下，并通过 `mkdocs.yml` 中的 `nav` 组织导航。

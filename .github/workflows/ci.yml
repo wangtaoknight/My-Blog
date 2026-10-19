@@ -8,6 +8,9 @@ on:
 
 jobs:
   deploy:
+    permissions:
+      contents: write # 允许工作流向仓库写入内容
+# ... 后面的代码保持不变
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2

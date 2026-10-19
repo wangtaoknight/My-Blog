@@ -25,7 +25,7 @@ theme:
     - navigation.top
     # - navigation.tabs          # 顶部一级导航
     - navigation.sections      # 侧边栏分组
-    - navigation.footer        # 页脚上一页/下一页
+    # - navigation.footer        # 页脚上一页/下一页
 
     - toc.follow               # 右侧目录跟随滚动
     - content.code.copy        # 代码块一键复制
